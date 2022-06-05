@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 
 body,
 html {
@@ -19,7 +19,6 @@ html {
   cursor: pointer;
   transition: background-color 0.3s;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
-
 }
 
 .tabbed > label:hover,
@@ -30,7 +29,6 @@ html {
 
 .tabs {
   clear: both;
-  /* perspective: 600px; */
   position: relative;
   background-color: white;
 }
@@ -50,8 +48,7 @@ html {
 #tab-nav-7:checked ~ .tabs > div:nth-of-type(7),
 #tab-nav-8:checked ~ .tabs > div:nth-of-type(8),
 #tab-nav-9:checked ~ .tabs > div:nth-of-type(9),
-#tab-nav-10:checked ~ .tabs > div:nth-of-type(10)
- {
+#tab-nav-10:checked ~ .tabs > div:nth-of-type(10) {
   transform: rotateX(0);
   display: block;
   z-index: 1;
@@ -86,10 +83,9 @@ a {
   overflow: hidden;
 }
 
-.row>*{
+.row > * {
   padding: 5px !important;
   color: #353533;
-
 }
 
 .card-reveal {
@@ -106,8 +102,12 @@ a {
   font-size: 24px;
 }
 
-button:hover{
-  background-color: #96965a !important; 
+button:hover {
+  background-color: #96965a !important;
+}
+
+.footer {
+  margin-top: 80px;
 }
 
 .lds-roller {
@@ -198,13 +198,9 @@ button:hover{
   }
 }
 
-@media (min-width:1200px) {
-
-
-    .tabbed > label {
-      margin-right: 45px;
-      padding: 12px 20px;
-    }
-    
-  
+@media (min-width: 1200px) {
+  .tabbed > label {
+    margin-right: 45px;
+    padding: 12px 20px;
+  }
 }

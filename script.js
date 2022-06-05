@@ -7,7 +7,7 @@ let allData = [];
 let enterData = [];
 let autoData = [];
 let startData = [];
-let worldData = []
+let worldData = [];
 let sports = document.querySelector(".sports");
 let all = document.querySelector(".all");
 let business = document.querySelector(".business");
@@ -18,7 +18,7 @@ let entertain = document.querySelector(".entertainment");
 let automobile = document.querySelector(".automobile");
 let startup = document.querySelector(".startup");
 let world = document.querySelector(".world");
-let footer = document.querySelector(".footer")
+let footer = document.querySelector(".footer");
 let spinner = document.getElementById("spinner");
 let spinner1 = document.getElementById("spinner1");
 let spinner2 = document.getElementById("spinner2");
@@ -74,7 +74,6 @@ async function fetchData() {
   });
   addEvent();
 
-
   const response1 = await fetch(
     "https://inshorts.deta.dev/news?category=business"
   );
@@ -116,9 +115,8 @@ async function fetchData() {
           </div>   
         </div>
       `;
-      
-    });
-    addEvent();
+  });
+  addEvent();
 
   const response2 = await fetch(
     "https://inshorts.deta.dev/news?category=sports"
@@ -209,7 +207,6 @@ async function fetchData() {
   `;
   });
   addEvent();
-
 
   const response4 = await fetch(
     "https://inshorts.deta.dev/news?category=politics"
@@ -343,7 +340,6 @@ async function fetchData() {
   });
   addEvent();
 
-
   const response7 = await fetch(
     "https://inshorts.deta.dev/news?category=automobile"
   );
@@ -475,7 +471,6 @@ async function fetchData() {
   `;
   });
   addEvent();
-
 }
 
 fetchData();
