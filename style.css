@@ -106,6 +106,10 @@ a {
   font-size: 24px;
 }
 
+button:hover{
+  background-color: #96965a !important; 
+}
+
 .lds-roller {
   display: flex;
   position: relative;
