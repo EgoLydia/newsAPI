@@ -1,20 +1,25 @@
-body,html{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+body,
+html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 .tabbed > input {
   display: none;
 }
 
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .tabbed > label {
-  display: block;
   float: left;
-  padding: 12px 20px;
-  border-radius: 20px;
-  margin-right: 5px;
+  padding: 5px 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
+
 }
 
 .tabbed > label:hover,
@@ -25,13 +30,14 @@ body,html{
 
 .tabs {
   clear: both;
-  perspective: 600px;
+  /* perspective: 600px; */
+  position: relative;
+  background-color: white;
 }
 
 .tabs > div {
-  position: absolute;
   line-height: 1.4em;
-  opacity: 0;
+  display: none;
   padding: 0px 20px;
 }
 
@@ -41,27 +47,73 @@ body,html{
 #tab-nav-4:checked ~ .tabs > div:nth-of-type(4),
 #tab-nav-5:checked ~ .tabs > div:nth-of-type(5),
 #tab-nav-6:checked ~ .tabs > div:nth-of-type(6),
-#tab-nav-7:checked ~ .tabs > div:nth-of-type(7) {
+#tab-nav-7:checked ~ .tabs > div:nth-of-type(7),
+#tab-nav-8:checked ~ .tabs > div:nth-of-type(8),
+#tab-nav-9:checked ~ .tabs > div:nth-of-type(9),
+#tab-nav-10:checked ~ .tabs > div:nth-of-type(10)
+ {
   transform: rotateX(0);
-  opacity: 1;
+  display: block;
   z-index: 1;
 }
 
-.mt-6{
-    margin-top: 60px;
+.mt-6 {
+  margin-top: 50px;
 }
 
-.img{
-    width: 500px;
-    height: 300px;
-    background-size: cover;
+button {
+  outline: none !important;
+  border: none !important;
+  background-color: #353533 !important;
+  padding: 10px;
+}
+.img {
+  width: 700px !important;
+  height: 300px !important;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none !important;
+  color: #ffff !important;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.row>*{
+  padding: 5px !important;
+  color: #353533;
+
+}
+
+.card-reveal {
+  position: absolute;
+  background-color: #fff;
+  height: 100%;
+  padding: 20px 5px;
+  display: none;
+  border: none;
+  color: #353533;
+}
+
+.close {
+  font-size: 24px;
 }
 
 .lds-roller {
-  display: none;
+  display: flex;
   position: relative;
   width: 80px;
   height: 80px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -140,4 +192,15 @@ body,html{
   100% {
     transform: rotate(360deg);
   }
+}
+
+@media (min-width:1200px) {
+
+
+    .tabbed > label {
+      margin-right: 45px;
+      padding: 12px 20px;
+    }
+    
+  
 }

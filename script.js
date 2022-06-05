@@ -5,6 +5,9 @@ let scienceData = [];
 let techData = [];
 let allData = [];
 let enterData = [];
+let autoData = [];
+let startData = [];
+let worldData = []
 let sports = document.querySelector(".sports");
 let all = document.querySelector(".all");
 let business = document.querySelector(".business");
@@ -12,6 +15,10 @@ let tech = document.querySelector(".tech");
 let politics = document.querySelector(".politics");
 let science = document.querySelector(".science");
 let entertain = document.querySelector(".entertainment");
+let automobile = document.querySelector(".automobile");
+let startup = document.querySelector(".startup");
+let world = document.querySelector(".world");
+let footer = document.querySelector(".footer")
 let spinner = document.getElementById("spinner");
 let spinner1 = document.getElementById("spinner1");
 let spinner2 = document.getElementById("spinner2");
@@ -19,6 +26,9 @@ let spinner3 = document.getElementById("spinner3");
 let spinner4 = document.getElementById("spinner4");
 let spinner5 = document.getElementById("spinner5");
 let spinner6 = document.getElementById("spinner6");
+let spinner7 = document.getElementById("spinner7");
+let spinner8 = document.getElementById("spinner8");
+let spinner9 = document.getElementById("spinner9");
 let modal = document.getElementsByClassName("card-reveal");
 
 async function fetchData() {
@@ -55,11 +65,15 @@ async function fetchData() {
          <div class="card-reveal">
            <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
             <p class="mb-2">${data.content}</p>
+            <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+            </button> 
         </div>
        </div>   
    </div>
         `;
   });
+  addEvent();
+
 
   const response1 = await fetch(
     "https://inshorts.deta.dev/news?category=business"
@@ -96,12 +110,15 @@ async function fetchData() {
           <div class="card-reveal">
           <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
            <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
        </div>
-
           </div>   
         </div>
       `;
-  });
+      
+    });
+    addEvent();
 
   const response2 = await fetch(
     "https://inshorts.deta.dev/news?category=sports"
@@ -138,12 +155,16 @@ async function fetchData() {
           <div class="card-reveal">
           <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
            <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
+
        </div>
 
           </div>   
         </div>
   `;
   });
+  addEvent();
 
   const response3 = await fetch(
     "https://inshorts.deta.dev/news?category=science"
@@ -180,12 +201,15 @@ async function fetchData() {
           <div class="card-reveal">
           <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
            <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
        </div>
-
-          </div>   
+      </div>   
         </div>
   `;
   });
+  addEvent();
+
 
   const response4 = await fetch(
     "https://inshorts.deta.dev/news?category=politics"
@@ -222,12 +246,14 @@ async function fetchData() {
           <div class="card-reveal">
           <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
            <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
        </div>
-
           </div>   
         </div>
   `;
   });
+  addEvent();
 
   const response5 = await fetch(
     "https://inshorts.deta.dev/news?category=entertainment"
@@ -264,12 +290,14 @@ async function fetchData() {
           <div class="card-reveal">
           <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
            <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
        </div>
-
           </div>   
         </div>
   `;
   });
+  addEvent();
 
   const response6 = await fetch(
     "https://inshorts.deta.dev/news?category=entertainment"
@@ -295,8 +323,8 @@ async function fetchData() {
           <p class="mb-2 mt-2">${data.title}</p>
           <p class="action mb-2 mt-2"><i class="bi bi-three-dots-vertical"></i></p>
           </div>
-          <p class="mb-2">Written by ${data.author}</p>
-          <div class="d-flex justify-content-between">
+          <p class="mb-2 author">Written by ${data.author}</p>
+          <div class="d-flex justify-content-between calendar">
           <p class="mb-2">${data.date}</p>
               <p class="mb-2">${data.time}</p>
           </div>
@@ -306,12 +334,148 @@ async function fetchData() {
        <div class="card-reveal">
           <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
            <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
        </div>
    </div>   
 </div>
   `;
   });
   addEvent();
+
+
+  const response7 = await fetch(
+    "https://inshorts.deta.dev/news?category=automobile"
+  );
+  const res7 = await response7.json();
+  if (res7) {
+    spinner7.style.display = "none";
+  }
+  autoData = res7.data;
+  autoData.forEach((data) => {
+    automobile.innerHTML += `
+    <div class="col-lg-3 col-md-4 mb-2 bg-white">
+      <div class="card p-3">
+        <div class="card-image">
+          <img
+            src="${data.imageUrl}"
+            alt=""
+            class="img-fluid img"
+          />
+        </div>
+        <div class="card-content">
+          <div class="d-flex justify-content-between">
+          <p class="mb-2 mt-2">${data.title}</p>
+          <p class="action mb-2 mt-2"><i class="bi bi-three-dots-vertical"></i></p>
+          </div>
+          <p class="mb-2 author">Written by ${data.author}</p>
+          <div class="d-flex justify-content-between calendar">
+          <p class="mb-2">${data.date}</p>
+              <p class="mb-2">${data.time}</p>
+          </div>
+          <button bg-dark text-white><a href="${data.readMoreUrl}">Read More</a>
+          </button>   
+       </div>
+       <div class="card-reveal">
+          <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
+           <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
+       </div>
+   </div>   
+</div>
+  `;
+  });
+  addEvent();
+
+  const response8 = await fetch(
+    "https://inshorts.deta.dev/news?category=startup"
+  );
+  const res8 = await response8.json();
+  if (res8) {
+    spinner8.style.display = "none";
+  }
+  startData = res8.data;
+  startData.forEach((data) => {
+    startup.innerHTML += `
+    <div class="col-lg-3 col-md-4 mb-2 bg-white">
+      <div class="card p-3">
+        <div class="card-image">
+          <img
+            src="${data.imageUrl}"
+            alt=""
+            class="img-fluid img"
+          />
+        </div>
+        <div class="card-content">
+          <div class="d-flex justify-content-between">
+          <p class="mb-2 mt-2">${data.title}</p>
+          <p class="action mb-2 mt-2"><i class="bi bi-three-dots-vertical"></i></p>
+          </div>
+          <p class="mb-2 author">Written by ${data.author}</p>
+          <div class="d-flex justify-content-between calendar">
+          <p class="mb-2">${data.date}</p>
+              <p class="mb-2">${data.time}</p>
+          </div>
+          <button bg-dark text-white><a href="${data.readMoreUrl}">Read More</a>
+          </button>   
+       </div>
+       <div class="card-reveal">
+          <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
+           <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
+       </div>
+   </div>   
+</div>
+  `;
+  });
+  addEvent();
+
+  const response9 = await fetch(
+    "https://inshorts.deta.dev/news?category=world"
+  );
+  const res9 = await response9.json();
+  if (res9) {
+    spinner9.style.display = "none";
+  }
+  worldData = res9.data;
+  worldData.forEach((data) => {
+    world.innerHTML += `
+    <div class="col-lg-3 col-md-4 mb-2 bg-white">
+      <div class="card p-3">
+        <div class="card-image">
+          <img
+            src="${data.imageUrl}"
+            alt=""
+            class="img-fluid img"
+          />
+        </div>
+        <div class="card-content">
+          <div class="d-flex justify-content-between">
+          <p class="mb-2 mt-2">${data.title}</p>
+          <p class="action mb-2 mt-2"><i class="bi bi-three-dots-vertical"></i></p>
+          </div>
+          <p class="mb-2 author">Written by ${data.author}</p>
+          <div class="d-flex justify-content-between calendar">
+          <p class="mb-2">${data.date}</p>
+              <p class="mb-2">${data.time}</p>
+          </div>
+          <button bg-dark text-white><a href="${data.readMoreUrl}">Read More</a>
+          </button>   
+       </div>
+       <div class="card-reveal">
+          <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
+           <p class="mb-2">${data.content}</p>
+           <button bg-dark text-white mt-5 text-center><a href="${data.readMoreUrl}">Read More</a>
+           </button> 
+       </div>
+   </div>   
+</div>
+  `;
+  });
+  addEvent();
+
 }
 
 fetchData();
