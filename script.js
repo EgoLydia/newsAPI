@@ -73,6 +73,8 @@ async function fetchData() {
         `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response1 = await fetch(
     "https://inshorts.deta.dev/news?category=business"
@@ -117,6 +119,8 @@ async function fetchData() {
       `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response2 = await fetch(
     "https://inshorts.deta.dev/news?category=sports"
@@ -163,6 +167,8 @@ async function fetchData() {
   `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response3 = await fetch(
     "https://inshorts.deta.dev/news?category=science"
@@ -207,6 +213,8 @@ async function fetchData() {
   `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response4 = await fetch(
     "https://inshorts.deta.dev/news?category=politics"
@@ -251,6 +259,8 @@ async function fetchData() {
   `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response5 = await fetch(
     "https://inshorts.deta.dev/news?category=entertainment"
@@ -295,6 +305,8 @@ async function fetchData() {
   `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response6 = await fetch(
     "https://inshorts.deta.dev/news?category=entertainment"
@@ -339,6 +351,8 @@ async function fetchData() {
   `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response7 = await fetch(
     "https://inshorts.deta.dev/news?category=automobile"
@@ -383,6 +397,8 @@ async function fetchData() {
   `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response8 = await fetch(
     "https://inshorts.deta.dev/news?category=startup"
@@ -427,6 +443,8 @@ async function fetchData() {
   `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
 
   const response9 = await fetch(
     "https://inshorts.deta.dev/news?category=world"
@@ -473,7 +491,6 @@ async function fetchData() {
   addEvent();
   footer.innerHTML = `<div class="p-2 bg-dark">
   <p class="text-center mt-5 text-white">Created by Lydia</p>`
-
 }
 
 fetchData();
