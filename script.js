@@ -471,6 +471,9 @@ async function fetchData() {
   `;
   });
   addEvent();
+  footer.innerHTML = `<div class="p-2 bg-dark">
+  <p class="text-center mt-5 text-white">Created by Lydia</p>`
+
 }
 
 fetchData();
