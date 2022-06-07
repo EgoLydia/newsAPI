@@ -1,73 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 
-body,
-html {
-  margin: 0;
-  padding: 0;
-}
-.tabbed > input {
-  display: none;
-}
 
-* {
-  font-family: "Poppins", sans-serif;
-}
-
-.tabbed > label {
-  float: left;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
-}
-
-.tabbed > label:hover,
-.tabbed > input:checked + label {
-  background: #353533;
-  color: white;
-}
-
-.tabs {
-  clear: both;
-  position: relative;
-  background-color: white;
-}
-
-.tabs > div {
-  line-height: 1.4em;
-  display: none;
-  padding: 0px 20px;
-}
-
-#tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
-#tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
-#tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
-#tab-nav-4:checked ~ .tabs > div:nth-of-type(4),
-#tab-nav-5:checked ~ .tabs > div:nth-of-type(5),
-#tab-nav-6:checked ~ .tabs > div:nth-of-type(6),
-#tab-nav-7:checked ~ .tabs > div:nth-of-type(7),
-#tab-nav-8:checked ~ .tabs > div:nth-of-type(8),
-#tab-nav-9:checked ~ .tabs > div:nth-of-type(9),
-#tab-nav-10:checked ~ .tabs > div:nth-of-type(10) {
-  transform: rotateX(0);
-  display: block;
-  z-index: 1;
-}
-
-.mt-6 {
-  margin-top: 50px;
-}
-
-button {
-  outline: none !important;
-  border: none !important;
-  background-color: #353533 !important;
-  padding: 10px;
-}
 .img {
   width: 700px !important;
   height: 300px !important;
   background-size: cover;
+  object-fit: cover;
 }
 
 a {
@@ -77,15 +14,11 @@ a {
 
 .card {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0px  rgba(0, 0, 0, 0.2);
   cursor: pointer;
   overflow: hidden;
-}
-
-.row > * {
-  padding: 5px !important;
-  color: #353533;
+  border: none;
 }
 
 .card-reveal {
@@ -102,14 +35,23 @@ a {
   font-size: 24px;
 }
 
-button:hover {
-  background-color: #96965a !important;
+.buttons:hover {
+  background-color:#eb5252 !important;
+  border: none;
 }
 
-.footer {
-  margin-top: 80px;
+.section{
+  margin-top: 65px;
 }
 
+.nav-link:hover{
+  cursor: pointer;
+  color: #eb5252 !important;
+}
+
+.nav-link, .navbar-brand{
+  color: #000 !important;
+}
 .lds-roller {
   display: flex;
   position: relative;
@@ -119,6 +61,11 @@ button:hover {
   align-items: center;
   margin: 0 auto;
 }
+
+#spinner{
+  display: none;
+}
+
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
@@ -198,9 +145,8 @@ button:hover {
   }
 }
 
-@media (min-width: 1200px) {
-  .tabbed > label {
-    margin-right: 45px;
-    padding: 12px 20px;
-  }
+
+
+footer{
+  margin-top: 100px;
 }
