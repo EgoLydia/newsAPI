@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400&display=swap');
-*{
-  font-family: 'Heebo', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@200;400&display=swap");
+* {
+  font-family: "Heebo", sans-serif;
 }
 .img {
   width: 700px !important;
@@ -14,17 +14,19 @@ a {
   color: #ffff !important;
 }
 
-.title, .content{
+.title,
+.content {
   font-size: 16px;
   font-size: 400;
 }
 
-.date{
+.date {
   font-size: 12px;
   font-weight: 200;
 }
 
-.author, .buttons{
+.author,
+.buttons {
   font-size: 14px;
   font-weight: 300;
 }
@@ -32,7 +34,7 @@ a {
 .card {
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 0 0 5px 0px  rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   overflow: hidden;
   border: none;
@@ -51,37 +53,43 @@ a {
 .close {
   font-size: 24px;
 }
-.buttons{
+.buttons {
   border: none;
 }
 
 .buttons:hover {
-  background-color:#eb5252 !important;
+  background-color: #eb5252 !important;
 }
 
-.section{
+.section {
   margin-top: 65px;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   cursor: pointer;
   color: #eb5252 !important;
 }
 
-.nav-link, .navbar-brand{
+.nav-link,
+.navbar-brand {
   color: #000 !important;
 }
 
-.navbar-toggler:focus{
+.navbar-toggler:focus {
   text-decoration: none;
   box-shadow: none;
   outline: none;
 }
 
-.nav-link{
+h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.nav-link {
   font-size: 14px;
   font-weight: 400;
-  margin-left:8px ;
+  margin-left: 8px;
   margin-right: 8px;
 }
 
@@ -93,6 +101,10 @@ a {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+}
+
+.spinner {
+  display: none;
 }
 
 .lds-roller div {
@@ -174,8 +186,6 @@ a {
   }
 }
 
-
-
-footer{
+footer {
   margin-top: 100px;
 }

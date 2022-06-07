@@ -1,7 +1,8 @@
 let allData = [];
 let value = "all";
 const all = document.querySelector(".all");
-const home = document.getElementById('all')
+const pageName = document.querySelector(".page-name");
+const home = document.getElementById("all");
 const footer = document.querySelector(".footer");
 const science = document.getElementById("science");
 const politics = document.getElementById("politics");
@@ -11,20 +12,26 @@ const world = document.getElementById("world");
 const business = document.getElementById("business");
 const auto = document.getElementById("auto");
 const tech = document.getElementById("tech");
-let spinner = document.getElementById("spinner");
+let spinner = document.querySelector(".spinner");
 let modal = document.getElementsByClassName("card-reveal");
+
+// $(window).load(function () {
+//   $(".spinner").fadeOut();
+// });
 
 home.addEventListener("click", () => {
   all.innerHTML = "";
   footer.innerHTML = "";
   value = "all";
+  spinner.style.display = "block";
   return fetchData();
 });
+
 science.addEventListener("click", () => {
-  spinner.style.display = "block"
   all.innerHTML = "";
   footer.innerHTML = "";
   value = "science";
+  spinner.style.display = "block";
   return fetchData();
 });
 
@@ -78,9 +85,10 @@ tech.addEventListener("click", () => {
 });
 
 async function fetchData() {
-  spinner.style.display = "block"
+  spinner.style.display = "block";
   const response = await fetch(
-    "https://inshorts.deta.dev/news?category=" + value);
+    "https://inshorts.deta.dev/news?category=" + value
+  );
   const res = await response.json();
   if (res) {
     spinner.style.display = "none";
