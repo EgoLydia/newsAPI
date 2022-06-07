@@ -100,13 +100,13 @@ async function fetchData() {
              <p class="mb-2 date">${data.date}</p>
              <p class="mb-2 date">${data.time}</p>
            </div>
-          <button class='buttons  bg-dark text-white'><a href="${data.readMoreUrl}">Read More</a>
+          <button class='buttons p-1 bg-dark text-white'><a href="${data.readMoreUrl}">Read More</a>
           </button>   
          </div>
          <div class="card-reveal">
            <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
             <p class="mb-2 content">${data.content}</p>
-            <button class='buttons bg-dark text-white mt-5 text-center'><a href="${data.readMoreUrl}">Read More</a>
+            <button class='buttons bg-dark p-1 text-white mt-5 text-center'><a href="${data.readMoreUrl}">Read More</a>
             </button> 
         </div>
        </div>   
