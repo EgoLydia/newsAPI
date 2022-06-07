@@ -1,6 +1,7 @@
 let allData = [];
 let value = "all";
 const all = document.querySelector(".all");
+const home = document.getElementById('all')
 const footer = document.querySelector(".footer");
 const science = document.getElementById("science");
 const politics = document.getElementById("politics");
@@ -64,7 +65,6 @@ auto.addEventListener("click", () => {
 
 tech.addEventListener("click", () => {
   all.innerHTML = "";
-  spinner.style.display = "block"
   footer.innerHTML = "";
   value = "sports";
   return fetchData();
@@ -91,21 +91,21 @@ async function fetchData() {
           />
          </div>
         <div class="card-content">
-          <div class="d-flex justify-content-between">
+          <div class="d-flex justify-content-between title">
              <p class="mb-2 mt-2">${data.title}</p>
              <p class="action mt-2 mb-2" "><i class="bi bi-three-dots-vertical"></i></p>
           </div>
-          <p class="mb-2">Written by ${data.author}</p>
+          <p class="mb-2 author">Written by ${data.author}</p>
           <div class="d-flex justify-content-between">
-             <p class="mb-2">${data.date}</p>
-             <p class="mb-2">${data.time}</p>
+             <p class="mb-2 date">${data.date}</p>
+             <p class="mb-2 date">${data.time}</p>
            </div>
           <button class='buttons  bg-dark text-white'><a href="${data.readMoreUrl}">Read More</a>
           </button>   
          </div>
          <div class="card-reveal">
            <span class=" d-flex justify-content-end" id="close"> <i class="p-3 close bi bi-x"></i></span>
-            <p class="mb-2">${data.content}</p>
+            <p class="mb-2 content">${data.content}</p>
             <button class='buttons bg-dark text-white mt-5 text-center'><a href="${data.readMoreUrl}">Read More</a>
             </button> 
         </div>

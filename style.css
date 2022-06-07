@@ -1,5 +1,7 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;400&display=swap');
+*{
+  font-family: 'Heebo', sans-serif;
+}
 .img {
   width: 700px !important;
   height: 300px !important;
@@ -10,6 +12,21 @@
 a {
   text-decoration: none !important;
   color: #ffff !important;
+}
+
+.title, .content{
+  font-size: 16px;
+  font-size: 400;
+}
+
+.date{
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.author, .buttons{
+  font-size: 14px;
+  font-weight: 300;
 }
 
 .card {
@@ -51,6 +68,11 @@ a {
 
 .nav-link, .navbar-brand{
   color: #000 !important;
+}
+
+.nav-link{
+  font-size: 14px;
+  font-weight: 400;
 }
 .lds-roller {
   display: flex;
