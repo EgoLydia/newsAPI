@@ -14,7 +14,14 @@ const tech = document.getElementById("tech");
 let spinner = document.getElementById("spinner");
 let modal = document.getElementsByClassName("card-reveal");
 
+home.addEventListener("click", () => {
+  all.innerHTML = "";
+  footer.innerHTML = "";
+  value = "all";
+  return fetchData();
+});
 science.addEventListener("click", () => {
+  spinner.style.display = "block"
   all.innerHTML = "";
   footer.innerHTML = "";
   value = "science";
@@ -81,7 +88,7 @@ async function fetchData() {
   allData = res.data;
   allData.forEach((data) => {
     all.innerHTML += `
-    <div class="col-lg-3 col-md-4 mb-2 bg-white">
+    <div class="col-lg-4 col-md-6 mb-2 bg-white">
       <div class="card p-3">
         <div class="card-image">
            <img
