@@ -15,71 +15,60 @@ const tech = document.getElementById("tech");
 let spinner = document.querySelector(".spinner");
 let modal = document.getElementsByClassName("card-reveal");
 
-// $(window).load(function () {
-//   $(".spinner").fadeOut();
-// });
-
-home.addEventListener("click", () => {
+function clear() {
   all.innerHTML = "";
   footer.innerHTML = "";
+}
+home.addEventListener("click", () => {
+  clear();
   value = "all";
-  spinner.style.display = "block";
   return fetchData();
 });
 
 science.addEventListener("click", () => {
-  all.innerHTML = "";
-  footer.innerHTML = "";
+  clear();
   value = "science";
-  spinner.style.display = "block";
   return fetchData();
 });
 
 politics.addEventListener("click", () => {
-  all.innerHTML = "";
-  footer.innerHTML = "";
+  clear();
   value = "politics";
   return fetchData();
 });
 
 sports.addEventListener("click", () => {
-  all.innerHTML = "";
-  footer.innerHTML = "";
+  clear();
   value = "sports";
   return fetchData();
 });
 
 business.addEventListener("click", () => {
-  all.innerHTML = "";
-  footer.innerHTML = "";
+  clear();
   value = "sports";
   return fetchData();
 });
 
 world.addEventListener("click", () => {
-  all.innerHTML = "";
-  footer.innerHTML = "";
+  clear();
   value = "sports";
   return fetchData();
 });
 
 entertain.addEventListener("click", () => {
-  all.innerHTML = "";
-  footer.innerHTML = "";
+  clear();
   value = "sports";
   return fetchData();
 });
 
 auto.addEventListener("click", () => {
-  all.innerHTML = "";
-  footer.innerHTML = "";
+  clear();
   value = "sports";
   return fetchData();
 });
 
 tech.addEventListener("click", () => {
-  all.innerHTML = "";
-  footer.innerHTML = "";
+  clear();
   value = "sports";
   return fetchData();
 });
